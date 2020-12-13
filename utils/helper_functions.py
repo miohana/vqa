@@ -4,7 +4,7 @@ import re
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.vgg19 import preprocess_input
 from tensorflow.keras import backend as K
-K.set_image_data_format('channels_first')
+#K.set_image_data_format('channels_first')
 
 def image_feature_extractor(image_file, model):
   """
@@ -27,9 +27,10 @@ def image_feature_extractor(image_file, model):
   img = preprocess_input(img)
 
   # pass the images through the network and use the outputs as our actual features
-  features = model.predict(img) # (BATCH_SIZE, 512, 7, 7)
-  features = tf.reshape(features, (features.shape[0], features.shape[1], -1)) # (BATCH_SIZE, 512, 49)
-  features = tf.transpose(features, perm =[0,2,1])  # (BATCH_SIZE, 49, 512)
+  features = model.predict(img) # old (BATCH_SIZE, 512, 7, 7) / new (BATCH_SIZE, 7, 7, 512) 
+  features = tf.reshape(features, (features.shape[3], features.shape[0], -1)) # old (BATCH_SIZE, 512, 49) / new (512, BATCH_SIZE, 49)
+  features = tf.transpose(features, perm =[1,2,0])  # (BATCH_SIZE, 49, 512)
+  
   return features
 
 # https://github.com/zcyang/imageqa-san

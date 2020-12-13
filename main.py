@@ -11,7 +11,7 @@ logging.basicConfig(level=logging.INFO)
 
 import tensorflow as tf
 import silence_tensorflow.auto  # pylint: disable=unused-import
-physical_devices = tf.config.experimental.list_physical_devices('GPU')
+#physical_devices = tf.config.experimental.list_physical_devices('GPU')
 #tf.config.experimental.set_memory_growth(physical_devices[0], True)
 from tensorflow.keras.applications import VGG19
 from tensorflow.keras.layers import Input
@@ -41,7 +41,7 @@ custom_objects = {
 
 # load the model
 model = tf.keras.models.load_model(MODEL_PATH, custom_objects=custom_objects)
-vgg_model = VGG19(weights="imagenet", include_top=False, input_tensor=Input(shape=(3, 224, 224)))
+vgg_model = VGG19(weights="imagenet", include_top=False)
   
 # Create Flask application
 app = Flask(__name__, static_url_path='/static')
