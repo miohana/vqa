@@ -10,6 +10,7 @@
 - [Technologies Used](#technologies-used)
 - [To Do](#to-do)
 - [License](#license)
+- [References](#references)
 
 ## Introduction
 A simple Flask app to generate answer given an image and a natural language question about the image. The app uses a deep learning model, trained with Tensorflow, behind the scenes.
@@ -23,7 +24,10 @@ Recent developments in Deep Learning has paved the way to accomplish tasks invol
 The model architecture is based on the paper [Hierarchical Question-Image Co-Attention for Visual Question Answering](https://arxiv.org/pdf/1606.00061).
 
 ## Technical Aspect
-The model used in the app is trained on [VQA 2.0](https://visualqa.org/download.html) dataset. The accuracy of the paper on this dataset is 54%. The model used in the Flask app has an accuracy of 49.20%.
+The model used in the app is trained on [VQA 2.0](https://visualqa.org/download.html) dataset. The accuracy of the paper on this dataset is 54%. The model used in the [VQA-Flask-App](https://github.com/arya46/VQA-Flask-App) has an accuracy of 49.20%.
+
+## Baseline
+[here](https://www.overleaf.com/project/5fd6d2775c7c41162b56e40f)
 
 ## Running the app locally
 *The Code is written in Python 3.7. If you don't have Python installed you can find it [here](https://www.python.org/downloads/). If you are using a lower version of Python you can upgrade using the pip package, ensuring you have the latest version of pip.*
@@ -78,8 +82,46 @@ The app will run on `http://localhost:8080/` in the browser.
 - [ ] Baseline obtido
 - [ ] Próximos passos
 - [ ] Explicação do problema
-- [ ] Atualização README.md
+- [X] README.md update
 
 
 ## License
 [LICENSE](https://github.com/miohana/unicamp-mo434/blob/main/LICENSE)
+
+## References
+
+### Main: 
+
+Hierarchical Question-Image Co-Attention
+for Visual Question Answering:
+https://arxiv.org/pdf/1606.00061.pdf
+
+Visual Question Answering with Deep Learning:
+https://towardsdatascience.com/visual-question-answering-with-deep-learning-2e5e7cbfdcd4
+
+https://github.com/arya46/VQA-Flask-App
+
+https://github.com/arya46/portfolio_notebooks/tree/master/Visual%20Question%20Answering
+
+### Others
+
+https://github.com/chingyaoc/VQA-tensorflow
+
+https://github.com/paarthneekhara/neural-vqa-tensorflow
+
+https://towardsdatascience.com/deep-learning-and-visual-question-answering-c8c8093941bc
+
+https://github.com/GT-Vision-Lab/VQA
+
+https://github.com/jnhwkim/ban-vqa
+
+https://github.com/chingyaoc/awesome-vqa
+
+https://github.com/Cyanogenoid/pytorch-vqa
+
+https://github.com/zhoubolei/VQAbaseline/blob/master/opensource_base.lua
+
+Simple Baseline for Visual Question Answering: https://arxiv.org/pdf/1512.02167.pdf
+
+Are You Talking to a Machine?
+Dataset and Methods for Multilingual Image Question Answering: https://arxiv.org/pdf/1505.05612.pdf
