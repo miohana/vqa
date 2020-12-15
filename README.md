@@ -1,4 +1,5 @@
-# unicamp-mo434 - Visual Question Answering
+# Visual Question Answering
+## Repository for the discipline MO434 , from [Campinas State University](https://www.unicamp.br/unicamp/english)
 
 ## Table of Content
 - [Introduction](#introduction)
@@ -77,11 +78,11 @@ The app will run on `http://localhost:8080/` in the browser.
 
 ## To Do
 - [X] Local deployement
-- [ ] Explicação do problema
-- [ ] Arquitetura
-- [ ] Baseline obtido
-- [ ] Próximos passos
-- [ ] Explicação do problema
+- [X] Explicação do problema
+- [X] Arquitetura
+- [X] Baseline obtido
+- [X] Próximos passos
+- [X] Explicação do problema
 - [X] README.md update
 
 
